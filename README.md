@@ -36,3 +36,13 @@ const lastLetterOfLastName = lastName[lastName.length-1];
 
 10.js二维数组创建
 const myArray = [[1,2],[3,4]];
+
+11.二维数组 例子
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1];//是8
