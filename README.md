@@ -32,3 +32,7 @@ myStr = "Job"; //能且只能这样
 
 9.获取字符串最后一个元素的一个小技巧
 const lastLetterOfLastName = lastName[lastName.length-1];
+
+
+10.js二维数组创建
+const myArray = [[1,2],[3,4]];
