@@ -56,3 +56,9 @@ const myArray = [["John", 23], ["cat", 2]];
 var removedFromMyArray = myArray.pop();
 输出： MyArray.pop 返回 : [["cat", 2]]
       myArray 剩余 ：[["John", 23]]   
+
+14.数组：shift()方法
+与pop()原理一样，唯一不同的就是它移除的是第一个元素，而不是最后一个
+
+15. 数组：unshift()方法
+与shift()原理一样，唯一不同的就是它添加元素在数组最前面，类似于开头版本的push().   
