@@ -62,3 +62,26 @@ var removedFromMyArray = myArray.pop();
 
 15. 数组：unshift()方法
 与shift()原理一样，唯一不同的就是它添加元素在数组最前面，类似于开头版本的push().   
+
+16.创建函数
+function reusablefunction() {
+  console.log("Hi World");
+}
+
+17.作用域
+未使用 let 或 const 关键字声明的变量（例如var）会在 global 范围内自动创建。 当在代码其他地方无意间定义了一个变量，刚好变量名与全局变量相同，这时会产生意想不到的后果。 你应该总是用 let 或 const 声明你的变量。
+在函数内部定义的变量，只属于此函数的局部作用域，并不影响此函数外面的.
+const outerWear = "T-Shirt";
+function myOutfit() {
+  let outerWear = 'sweater'; //局部作用域（函数内重载）    
+  return outerWear;
+}
+myOutfit();
+
+18.严格相等
+严格相等 ( ===) 是相等运算符 ( ) 的对应项==。但是，与尝试将两个被比较的值转换为通用类型的相等运算符不同，严格相等运算符不执行类型转换。
+3 ===  3  // true  
+3 === '3' // false
+不严格相等:!==
+
+
