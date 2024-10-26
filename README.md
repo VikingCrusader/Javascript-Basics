@@ -84,4 +84,114 @@ myOutfit();
 3 === '3' // false
 不严格相等:!==
 
+19. switch 记住冒号和break,还有default表示未找到匹配项的时候输出的结果
+    switch(val){
+    case 1:
+      answer = 'alpha';
+      break;
+    case 2:
+      answer = 'beta';
+      break;
+    case 3:
+      answer = 'gamma';
+      break;
+    case 4:
+      answer = 'delta';
+      break;
+    default:
+      answer = 'stuff';
+      break;
+  }
+注意case不是数字的时候带引号，例如 case "a":  
+下面这样也行，那么就是1，2，3都可以输出Low
+    case 1:
+    case 2:
+    case 3:
+      answer = 'Low';
+    
+21. return a<b; 意思是，如果a<b，就返回True，否则返回False
 
+22. JS 对象的创建
+  const myDog = {
+  name:'wangcai',
+  legs:4,
+  tails:1,
+  friends:['miao','miaomiao']
+};
+
+23.对象的访问：点访问法 
+const hatValue = testObj.hat;
+方括号访问法：不常用，但是要了解
+注意，如果属性名中包含空格，就必须使用引号（单引号或双引号）将它们包裹起来。
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+const entreeValue = testObj["an entree"];   
+const drinkValue = testObj["the drink"];     
+
+24.给对象添加新属性：直接添加
+const myDog = {
+  "name": "Happy Coder",  
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = 'woof';
+
+25.delete关键字：删除对象中的属性
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+delete myDog.tails;
+
+26.haveOwnProperty()方法
+要检查给定对象上的属性是否存在，可以使用该.hasOwnProperty()方法。someObject.hasOwnProperty(someProperty)返回true或false取决于是否在对象上找到该属性。
+语法如下：
+function checkForProperty(object, property) {
+  return object.hasOwnProperty(property);
+}
+
+27.访问嵌套对象的属性
+我们可以叠加点和方括号
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+28.访问数组对象的属性
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
