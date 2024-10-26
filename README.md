@@ -14,7 +14,21 @@ var在同一作用域可以重复声明，let不行，否则会报错！
 
 5.JS字符串拼接使用+号           
 const ourStr = "I come first. " + "I come second.";
-引引加加
+字符串插入元素：引引加加  
 
 6.输出字符串长度，用.length方法
 lastNameLength = lastName.length;
+
+7.获取字符串中第一个字符的长度
+firstLetterOfLastName = lastName[0]; 
+
+8.字符串不能直接修改一部分，但是可以完全重新编辑
+
+let myStr = "Bob";
+myStr[0] = "J"; //这样会报错
+
+let myStr = "Bob";
+myStr = "Job"; //能且只能这样
+
+9.获取字符串最后一个元素的一个小技巧
+const lastLetterOfLastName = lastName[lastName.length-1];
