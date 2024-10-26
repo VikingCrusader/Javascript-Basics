@@ -1,0 +1,62 @@
+我们有一个对象数组，代表联系人列表中的不同人。
+
+已经为您预先编写了一个以属性（）作为参数的函数lookUpProfile。nameprop
+
+该函数应该检查是否name是实际联系人firstName，并且给定的属性（prop）是否是该联系人的属性。
+
+如果两者都为真，则返回该属性的“值”。
+
+如果name不对应任何联系人，则返回字符串No such contact。
+
+如果prop不对应于找到匹配的联系人的任何有效属性name，则返回字符串No such property。
+
+代码如下：
+const contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unknown",
+        likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+];
+
+function lookUpProfile(name, prop) {
+    for (var i = 0 ; i < contacts.length ; i++){
+        if(contacts[i].firstName === name){
+            if (prop == 'lastName'){
+                return contacts[i]['lastName'];
+            }
+            if (prop == 'number'){
+                return contacts[i]['number'];
+            }
+            if (prop == 'likes'){
+                return contacts[i]['likes'];
+            }
+        }
+        else{
+            continue;
+        }
+        return "No such property";
+    }
+    return "No such contact";
+}
+
+console.log(lookUpProfile("Akira", "likes"));
