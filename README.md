@@ -12,5 +12,6 @@ var在同一作用域可以重复声明，let不行，否则会报错！
 
 4. \n换行 \t制表 \\反斜杠（单），可以在引号中使用    
 
-5.JS字符串拼接使用+号
+5.JS字符串拼接使用+号           
 const ourStr = "I come first. " + "I come second.";
+引引加加
