@@ -33,7 +33,6 @@ myStr = "Job"; //能且只能这样
 9.获取字符串最后一个元素的一个小技巧
 const lastLetterOfLastName = lastName[lastName.length-1];
 
-
 10.js二维数组创建
 const myArray = [[1,2],[3,4]];
 
@@ -44,5 +43,16 @@ const myArray = [
   [7, 8, 9],
   [[10, 11, 12], 13, 14],
 ];
-
 const myData = myArray[2][1];//是8
+
+12.数组：push()方法
+push() 方法需要一个或多个 参数 并将它们根据出现顺序追加到数组的末尾。 它返回数组的新长度
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);
+
+13.数组：pop()方法
+.pop() 函数用来弹出一个数组末尾的值。 我们可以把这个弹出的值赋给一个变量存储起来。 换句话说就是 .pop() 函数移除数组末尾的元素并返回这个元素。
+const myArray = [["John", 23], ["cat", 2]];
+var removedFromMyArray = myArray.pop();
+输出： MyArray.pop 返回 : [["cat", 2]]
+      myArray 剩余 ：[["John", 23]]   
