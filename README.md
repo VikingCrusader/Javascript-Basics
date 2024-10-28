@@ -233,3 +233,64 @@ function findGreaterOrEqual(a, b) {
 }
 
 33.递归 以后再看
+
+34.面向对象部分
+this关键字 构造函数
+function Dog(){
+  this.name = "hund";
+  this.color = "blau";
+  this.numLegs = 4;
+}
+
+35.使用构造函数创建对象
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+let hound = new Dog();   后面用class也行
+请注意，使用构造函数创建的所有对象都自动命名为 Rubert，颜色为棕色，并且有4条腿。
+那么想要属性不一样的对象怎么办？手动修改！
+let swan = new Bird();
+swan.name = "Carlos";
+swan.color = "white";
+
+36.构造函数创建对象
+function Dog(name,color) {
+    this.name = name,
+    this.color = color,
+    this.numLegs = 4
+}
+let terrier = new Dog('dick','green');
+
+37.instanceof关键字
+instanceof允许您将对象与构造函数进行比较，返回true或false基于该对象是否由构造函数创建。以下是一个例子：
+
+let Bird = function(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 2;
+}
+let crow = new Bird("Alexis", "black");
+crow instanceof Bird;
+此instanceof方法将返回true。
+
+38.遍历对象的所有自身属性 for (let property in duck)  
+利用property关键字 以及hasOwnProperty()关键字
+例子：
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+let duck = new Bird("Donald");
+let canary = new Bird("Tweety");
+name 和 numLegs 被叫作自身属性，因为它们是直接在实例对象上定义的。 这就意味着 duck 和 canary 这两个对象分别拥有这些属性的独立副本。 事实上，Bird 的所有实例都将拥有这些属性的独立副本。 下面的代码将 duck 的所有自身属性都存到一个叫作 ownProps 的数组里面：
+let ownProps = [];
+for (let property in duck) {
+  if(duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  }
+}
+
+console.log(ownProps);
+控制台将显示值 ["name", "numLegs"]。
