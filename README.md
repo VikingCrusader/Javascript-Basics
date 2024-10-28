@@ -208,3 +208,26 @@ function multiplyAll(arr) {
 }
 
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+30.调用 Math.random()，
+生成并返回 0 和 9 之间的随机整数。
+return Math.floor(Math.random()*10);
+
+返回一个在 myMin（包括 myMin）和 myMax（包括 myMax）之间的随机整数。
+function randomRange(myMin, myMax) {
+  var a = Math.floor((myMax-myMin+1)*Math.random())+myMin;
+  return a;
+}
+
+31. parseInt(str) 字符串转化为数字
+ const a = parseInt("007"); 默认转化为十进制
+const a = parseInt("11", 2); 转化为二进制
+
+32.三元运算符 ？：    
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
+
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+}
